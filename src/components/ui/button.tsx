@@ -16,6 +16,11 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        story: "story-button",
+        navigation: "navigation-button",
+        idea: "idea-button",
+        genre: "genre-button",
+        tool: "tool-button",
       },
       size: {
         default: "h-9 px-4 py-2",
