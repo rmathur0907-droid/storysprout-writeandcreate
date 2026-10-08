@@ -14,7 +14,7 @@ export function StoryCanvas() {
     const ctx = canvas.current?.getContext('2d');
     if (ctx) history.current.push(ctx.getImageData(0, 0, 900, 350));
   }
-  function point(event: PointerEvent<HTMLCanvasElement>) {
+  function point(event: PointerEvent<HTMLCanvasElement>): [number, number] {
     const rect = event.currentTarget.getBoundingClientRect();
     return [(event.clientX - rect.left) * 900 / rect.width, (event.clientY - rect.top) * 350 / rect.height];
   }

@@ -7,7 +7,7 @@ import { genres } from '@/lib/story-genres';
 
 export function StoryWorkspace({ onStep }: { onStep: (step: number) => void }) {
   const [genreIndex, setGenreIndex] = useState(0);
-  const genre = genres[genreIndex];
+  const genre = genres[genreIndex] ?? genres[0];
   const [mode, setMode] = useState<'choose' | 'draw' | 'write'>('choose');
   const [step, setStep] = useState(1);
   const [idea, setIdea] = useState('');
