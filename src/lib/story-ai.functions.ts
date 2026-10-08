@@ -13,7 +13,7 @@ Rules:
 export const continueStory = createServerFn({ method: 'POST' })
   .inputValidator((d: unknown) => z.object({ idea: z.string().trim().min(1).max(1000), genre: z.string().max(60), direction: z.string().max(300) }).parse(d))
   .handler(async ({ data }) => {
-    const key = process.env.LOVABLE_API_KEY;
+    const key = process.env['LOVABLE_API_KEY'];
     if (!key) return { text: null, error: 'Sprout is resting right now. Please try again soon.' };
     const genreLine = data.direction
       ? `Selected genre: ${data.genre}. Use it only as a light creative direction: ${data.direction} The child's beginning always comes first.`
