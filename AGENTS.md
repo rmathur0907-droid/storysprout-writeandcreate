@@ -10,6 +10,6 @@
 <!-- LOVABLE:END -->
 
 ## Application rules
-- Keep the StorySprout experience in focused browser-safe components with session-only story state; no account or remote service is needed for curated prompts.
+- Keep the StorySprout experience in focused browser-safe components with session-only story state; story continuation uses a server function that always builds on the child's own beginning.
 - Define all appearance roles in src/styles.css and use shared Button variants for interactions so both themes stay consistent.
 - Keep genre prompts in a shared data module so selection, surprise prompts, and writing suggestions use the same genre.
